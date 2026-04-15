@@ -2,6 +2,7 @@
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TheLastOfThem.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260415125910_PruebaAnimales")]
+    partial class PruebaAnimales
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
@@ -23,33 +26,43 @@ namespace TheLastOfThem.Api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Amenazas")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Categoria")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Especie")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Familia")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Genero")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Justificacion")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NombreCientifico")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NombreComun")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Orden")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Reino")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

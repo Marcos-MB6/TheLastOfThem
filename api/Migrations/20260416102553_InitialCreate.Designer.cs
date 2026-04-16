@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TheLastOfThem.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260415125910_PruebaAnimales")]
-    partial class PruebaAnimales
+    [Migration("20260416102553_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,48 +26,61 @@ namespace TheLastOfThem.Api.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Amenazas")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Categoria")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Especie")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Familia")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Genero")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Justificacion")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NombreCientifico")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NombreComun")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Orden")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Reino")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.ToTable("Animales");
+                });
+
+            modelBuilder.Entity("api.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }

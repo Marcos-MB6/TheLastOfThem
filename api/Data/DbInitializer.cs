@@ -1,6 +1,5 @@
-
-
 using api.Models;
+using Microsoft.VisualBasic.FileIO;
 
 namespace API.Data;
 
@@ -11,26 +10,39 @@ public static class DbInitializer
 
         if (context.Animales.Any())
         {
-            return; 
+            return;
         }
 
         var rutaCsv = "Data/SeedData/assessments.csv";
 
-        if (!File.Exists(rutaCsv)) return;
-
-        var lineas = File.ReadAllLines(rutaCsv);
-
-        foreach (var linea in lineas.Skip(1))
+        using (TextFieldParser parser = new TextFieldParser(rutaCsv))
         {
-            var columnas = linea.Split(',');
+            parser.TextFieldType = FieldType.Delimited;
+            parser.SetDelimiters(",");
+            parser.HasFieldsEnclosedInQuotes = true;
 
-            var animal = new Animal
+            parser.ReadLine();
+
+            while (!parser.EndOfData)
             {
-                NombreCientifico = columnas[2],
-                Categoria = columnas[3]
-            };
+                string[] columnas = parser.ReadFields();
 
-            context.Animales.Add(animal);
+                var animal = new Animal
+                {
+                    NombreComun = columnas[0],
+                    NombreCientifico = columnas[1],
+                    Categoria = columnas[2],
+                    Reino = columnas[3],
+                    Orden = columnas[4],
+                    Familia = columnas[5],
+                    Genero = columnas[6],
+                    Especie = columnas[7],
+                    Justificacion = columnas[8],
+                    Amenazas = columnas[9]
+                };
+
+                context.Animales.Add(animal);
+            }
         }
 
         context.SaveChanges();

@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  
+  <div *ngIf="noticias.length > 0" id="noticiasCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      
+      <div *ngFor="let noticia of noticias; let i = index" class="carousel-item" [class.active]="i === 0">
+        
+        <img [src]="noticia.image" class="d-block w-100" style="height: 600px; object-fit: cover;" [alt]="noticia.title">
+        
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3">
+          <h3 class="fw-bold">{{ noticia.title }}</h3>
+          <p>{{ noticia.description }}</p>
+          
+          <a [href]="noticia.url" target="_blank" class="btn btn-outline-light btn-sm mt-2">
+            Read more <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <div *ngIf="noticias.length === 0" class="text-center py-5">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Cargando noticias...</span>
+    </div>
+  </div>
+</div>

@@ -28,6 +28,9 @@ namespace TheLastOfThem.Api.Migrations
                     b.Property<string>("Categoria")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Continente")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Especie")
                         .HasColumnType("TEXT");
 
@@ -70,6 +73,10 @@ namespace TheLastOfThem.Api.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .IsRequired()
                         .HasColumnType("BLOB");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Username")
                         .IsRequired()

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheLastOfThem.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a791b81508a169940de62b0f473d669d9d5f07b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6090fe06005e6befd6d7bef0a41283e4fa0420f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheLastOfThem.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheLastOfThem.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

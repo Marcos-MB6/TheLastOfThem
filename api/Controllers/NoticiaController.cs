@@ -25,7 +25,7 @@ namespace api.Controllers
         public async Task<ActionResult<IEnumerable<NoticiaDTO>>> ObtenerNoticias()
         {
             var apiKey = "c4c690d9ee42d55d7d29f9bcb75d2654";
-            var url = $"https://gnews.io/api/v4/search?q=\"animal extinction\" OR \"endangered species\"&lang=en&max=5&apikey={apiKey}";
+            var url = $"https://gnews.io/api/v4/search?q=\"IUCN\"&lang=en&max=5&apikey={apiKey}";
 
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetFromJsonAsync<ListaNoticiasDTO>(url);

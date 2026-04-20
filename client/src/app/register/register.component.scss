@@ -1,0 +1,122 @@
+$bg-principal: #fafbfd;
+$verde-nav: #5d8833;
+$color-texto: #333333;
+$btn-register-bg: #141b13;
+
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  background-color: $bg-principal;
+  padding: 2rem;
+
+  .register-card {
+    background-color: #ffffff;
+    padding: 2.5rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+
+    h2 {
+      color: $btn-register-bg;
+      font-family: "Roboto Slab", serif;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      color: $color-texto;
+      font-size: 1rem;
+    }
+
+    .custom-register-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      text-align: left;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        label {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          font-size: 0.9rem;
+          color: #555555;
+        }
+
+        input {
+          padding: 0.75rem 1rem;
+          border: 1.5px solid #e0e0e0;
+          border-radius: 6px;
+          color: $color-texto;
+          font-family: "Open Sans", sans-serif;
+          font-size: 1rem;
+          outline: none;
+          transition: all 0.3s ease;
+
+          &:focus {
+            border-color: $verde-nav;
+            box-shadow: 0 0 0 3px rgba(93, 136, 51, 0.15);
+          }
+        }
+      }
+
+      .btn-register-submit {
+        padding: 0.85rem;
+        background-color: $btn-register-bg;
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 1rem;
+        transition:
+          background-color 0.3s ease,
+          transform 0.1s ease;
+
+        &:hover {
+          background-color: lighten($btn-register-bg, 15%);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+    .error-container {
+      background-color: #fdf2f2;
+      border: 1px solid #fbc4c4;
+      border-radius: 6px;
+      padding: 10px 15px;
+      margin-top: 0.5rem;
+
+      .error-list {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        color: #a71616;
+        font-size: 0.85rem;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+
+        li {
+          margin-bottom: 4px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

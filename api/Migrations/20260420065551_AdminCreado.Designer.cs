@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TheLastOfThem.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260416102553_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260420065551_AdminCreado")]
+    partial class AdminCreado
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,6 +29,9 @@ namespace TheLastOfThem.Api.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Categoria")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Continente")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Especie")
@@ -73,6 +76,10 @@ namespace TheLastOfThem.Api.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .IsRequired()
                         .HasColumnType("BLOB");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Username")
                         .IsRequired()

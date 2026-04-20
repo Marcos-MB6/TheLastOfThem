@@ -31,13 +31,12 @@ namespace api.Controllers
             }
             using var hmac = new HMACSHA512();
 
-
-
             User usuario = new User
             {
                 Username = registerdto.Username.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerdto.Password)),
-                PasswordSalt = hmac.Key
+                PasswordSalt = hmac.Key,
+                Tipo = "NoAdmin"
             };
 
             _context.Usuarios.Add(usuario);

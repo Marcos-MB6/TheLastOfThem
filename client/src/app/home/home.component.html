@@ -1,34 +1,176 @@
 <div class="container mt-5">
-  
-  <div *ngIf="noticias.length > 0" id="noticiasCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+  <div
+    *ngIf="noticias.length > 0"
+    id="noticiasCarousel"
+    class="carousel slide shadow-lg rounded-4 overflow-hidden"
+    data-bs-ride="carousel"
+  >
     <div class="carousel-inner">
-      
-      <div *ngFor="let noticia of noticias; let i = index" class="carousel-item" [class.active]="i === 0">
-        
-        <img [src]="noticia.image" class="d-block w-100" style="height: 600px; object-fit: cover;" [alt]="noticia.title">
-        
-        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3">
+      <div
+        *ngFor="let noticia of noticias; let i = index"
+        class="carousel-item"
+        [class.active]="i === 0"
+      >
+        <img
+          [src]="noticia.image"
+          class="d-block w-100"
+          style="height: 600px; object-fit: cover"
+          [alt]="noticia.title"
+        />
+
+        <div
+          class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-3 p-3"
+        >
           <h3 class="fw-bold">{{ noticia.title }}</h3>
           <p>{{ noticia.description }}</p>
-          
-          <a [href]="noticia.url" target="_blank" class="btn btn-outline-light btn-sm mt-2">
+
+          <a
+            [href]="noticia.url"
+            target="_blank"
+            class="btn btn-outline-light btn-sm mt-2"
+          >
             Read more <i class="bi bi-box-arrow-up-right"></i>
           </a>
         </div>
-
       </div>
-
     </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="prev">
+
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#noticiasCarousel"
+      data-bs-slide="prev"
+    >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Anterior</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#noticiasCarousel" data-bs-slide="next">
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#noticiasCarousel"
+      data-bs-slide="next"
+    >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Siguiente</span>
     </button>
   </div>
+
+  <section class="search-section mt-5 pt-4 text-center">
+    <h2 class="mb-4">Explore</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-7">
+        <div class="input-group input-group-lg shadow-sm mb-3">
+          <input
+            type="text"
+            class="form-control custom-search-input"
+            placeholder="Search by common or scientific name..."
+            [(ngModel)]="filtrosBusqueda.NombreBusqueda"
+          />
+          <button class="btn btn-search" (click)="onSearch()">
+            <i class="bi bi-search me-2"></i>Search
+          </button>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Kingdom
+            </button>
+            <div class="dropdown-menu p-3">
+              <div class="form-check" *ngFor="let reino of reinos">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [id]="reino"
+                  [(ngModel)]="filtrosBusqueda.Reinos"
+                />
+                <label class="form-check-label" [for]="reino">{{ reino }}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              RedList Category
+            </button>
+            <div class="dropdown-menu p-3">
+              <div class="form-check" *ngFor="let r of redlist">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [id]="r"
+                  [(ngModel)]="filtrosBusqueda.Redlist"
+                />
+                <label class="form-check-label" [for]="r">{{ r }}</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Continent
+            </button>
+            <div class="dropdown-menu p-3">
+              <div class="form-check" *ngFor="let cont of continentes">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  [id]="cont"
+                  [(ngModel)]="filtrosBusqueda.Continentes"
+                />
+                <label class="form-check-label" [for]="cont">{{ cont }}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section mt-5 pt-5 mb-5 text-center">
+    <h2 class="mb-4">About Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8">
+        <p class="about-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="about-text">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+          ea commodi consequatur?
+        </p>
+      </div>
+    </div>
+  </section>
 
   <div *ngIf="noticias.length === 0" class="text-center py-5">
     <div class="spinner-border text-success" role="status">

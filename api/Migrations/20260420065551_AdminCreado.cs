@@ -5,7 +5,7 @@
 namespace TheLastOfThem.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class AdminCreado : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,6 +18,7 @@ namespace TheLastOfThem.Api.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     NombreComun = table.Column<string>(type: "TEXT", nullable: true),
                     NombreCientifico = table.Column<string>(type: "TEXT", nullable: true),
+                    Continente = table.Column<string>(type: "TEXT", nullable: true),
                     Categoria = table.Column<string>(type: "TEXT", nullable: true),
                     Reino = table.Column<string>(type: "TEXT", nullable: true),
                     Orden = table.Column<string>(type: "TEXT", nullable: true),
@@ -40,7 +41,8 @@ namespace TheLastOfThem.Api.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Username = table.Column<string>(type: "TEXT", nullable: false),
                     PasswordHash = table.Column<byte[]>(type: "BLOB", nullable: false),
-                    PasswordSalt = table.Column<byte[]>(type: "BLOB", nullable: false)
+                    PasswordSalt = table.Column<byte[]>(type: "BLOB", nullable: false),
+                    Tipo = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

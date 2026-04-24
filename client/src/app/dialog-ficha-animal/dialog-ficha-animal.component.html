@@ -1,0 +1,71 @@
+<div class="dialog-container">
+  
+  <mat-dialog-content class="content-wrapper">
+
+    <div class="header-image-container">
+      <img
+        #fotoFicha
+        [src]="
+          'assets/icons/fotosAnimales/' +
+          data?.nombreComun?.toLowerCase() +
+          '.jpg'
+        "
+        (error)="fotoFicha.src = 'assets/icons/fotosAnimales/default.jpg'"
+        alt="Imagen del animal"
+      />
+    </div>
+
+    <div class="technical-grid">
+      <div class="info-item">
+        <label>Nombre común</label>
+        <span>{{ data?.nombreComun }}</span>
+      </div>
+      <div class="info-item">
+        <label>Nombre científico</label>
+        <span>{{ data?.nombreCientifico }}</span>
+      </div>
+      <div class="info-item">
+        <label>Categoría</label>
+        <span>{{ data?.categoria }}</span>
+      </div>
+
+      <div class="info-item">
+        <label>Continente</label>
+        <span>{{ data?.continente }}</span>
+      </div>
+      <div class="info-item">
+        <label>Reino</label>
+        <span>{{ data?.reino }}</span>
+      </div>
+      <div class="info-item">
+        <label>Orden</label>
+        <span>{{ data?.orden }}</span>
+      </div>
+
+      <div class="info-item">
+        <label>Familia</label>
+        <span>{{ data?.familia }}</span>
+      </div>
+      <div class="info-item">
+        <label>Género</label>
+        <span>{{ data?.genero }}</span>
+      </div>
+      <div class="info-item">
+        <label>Especie</label>
+        <span>{{ data?.especie }}</span>
+      </div>
+    </div>
+
+    <div class="text-sections">
+      <div class="section">
+        <h2>Justificación</h2>
+        <p>{{ data?.justificacion }}</p>
+      </div>
+
+      <div class="section">
+        <h2>Amenazas</h2>
+        <p>{{ data?.amenazas }}</p>
+      </div>
+    </div>
+  </mat-dialog-content>
+</div>

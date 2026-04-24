@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using api.DTOs;
 using api.Models;
 using API.Controllers;
@@ -10,7 +5,6 @@ using API.Data;
 using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace api.Controllers
 {
@@ -35,12 +29,21 @@ namespace api.Controllers
 
         }
 
+        [HttpGet("animal/{id}")]
+        public async Task<ActionResult<AnimalDTO>> GetAnimalId(int id)
+        {
+            Animal animal = _context.Animales.First(a => a.Id == id);
+            AnimalDTO animaldto = _mapper.Map<AnimalDTO>(animal);
+            return Ok(animaldto);
+
+        }
+
         [HttpGet("filtros")]
         public async Task<ActionResult<List<AnimalDTO>>> GetAnimalesFiltros([FromQuery] FiltroBusquedaDTO filtroBusquedaDTO)
         {
             var consulta = _context.Animales.AsQueryable();
 
-            if (filtroBusquedaDTO.NombreBusqueda != "")
+            if (filtroBusquedaDTO.NombreBusqueda != "" && filtroBusquedaDTO.NombreBusqueda != null)
             {
                 consulta = consulta.Where(a => a.NombreComun.ToLower().Contains(filtroBusquedaDTO.NombreBusqueda.ToLower()) ||
                 a.NombreCientifico.ToLower().Contains(filtroBusquedaDTO.NombreBusqueda.ToLower()));

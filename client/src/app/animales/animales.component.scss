@@ -1,0 +1,75 @@
+/* --- CUADRÍCULA (GRID) --- */
+.animal-grid {
+  display: grid;
+  // Obligamos a crear 4 columnas exactas de 400px
+  grid-template-columns: repeat(4, 400px);
+  column-gap: 56px;
+  row-gap: 64px;
+  justify-content: center; // Centra todo el bloque si la pantalla es muy grande
+}
+
+/* --- LA CARTA --- */
+.custom-card {
+  width: 400px;
+  height: 250px;
+  background: white;
+  border-radius: 12px; // Bordes redondeados (opcional, quítalo si las quieres cuadradas)
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- IMAGEN SUPERIOR (400x180) --- */
+.card-image-wrapper {
+  width: 400px;
+  height: 180px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Magia: rellena el hueco recortando lo que sobre, pero sin chafar la foto
+  }
+}
+
+/* --- PIE DE CARTA (Los 70px restantes) --- */
+.card-footer-info {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px; // Espacio a los lados para que los iconos no toquen el borde
+
+  /* --- ICONOS (50x50) --- */
+  .kingdom-icon, .redlist-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; // Evita que los iconos se deformen
+    flex-shrink: 0; // Evita que el icono se haga pequeño si el texto del centro es muy largo
+  }
+
+  /* --- TEXTO CENTRAL --- */
+  .text-center {
+    flex-grow: 1;
+    padding: 0 15px;
+    overflow: hidden; // Necesario para que el texto largo no rompa la carta
+
+    h3.nombre-comun {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; // Si no cabe, pone "..."
+    }
+
+    p.nombre-cientifico {
+      font-size: 0.85rem;
+      color: #6c757d; // Gris suave
+      margin: 0;
+      font-style: italic;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

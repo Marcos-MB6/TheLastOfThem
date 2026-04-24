@@ -1,1 +1,40 @@
-<p>animales works!</p>
+<div class="container-fluid mt-5 px-4">
+  <app-buscador></app-buscador>
+
+  <div class="mt-5">
+    <div class="animal-grid">
+      
+      <div class="animal-card-wrapper" (click)="openDialogAnimal(animal)" *ngFor="let animal of animales">
+        <div class="custom-card shadow-sm">
+          
+          <div class="card-image-wrapper">
+            <img #fotoAnimal
+              [src]="'assets/icons/fotosAnimales/' + animal.nombreComun.toLowerCase() + '.jpg'"
+              [alt]="animal.nombreComun"
+              (error)="fotoAnimal.src = 'assets/icons/fotosAnimales/default.jpg'"
+            />
+          </div>
+
+          <div class="card-footer-info">
+            <img
+              [src]="'assets/icons/reinos/' + animal.reino.toLowerCase() + '.png'"
+              class="kingdom-icon"
+            />
+
+            <div class="text-center w-100">
+              <h3 class="nombre-comun">{{ animal.nombreComun }}</h3>
+              <p class="nombre-cientifico">{{ animal.nombreCientifico }}</p>
+            </div>
+
+            <img
+              [src]="'assets/icons/redlist/' + animal.categoria.toLowerCase() + '.png'"
+              class="redlist-icon"
+            />
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

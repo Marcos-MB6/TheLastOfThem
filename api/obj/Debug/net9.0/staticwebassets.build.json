@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "LsdyngJumbXQA5/n2UoRKfK1+BJi2LrLrDgo+MUufy4=",
+  "Hash": "CNdURAvv2++ybvPyIajHaLdsTDjN48MGBOh3XSI6fHA=",
   "Source": "TheLastOfThem.Api",
   "BasePath": "_content/TheLastOfThem.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TheLastOfThem.Api\\wwwroot",
+      "Source": "TheLastOfThem.Api",
+      "ContentRoot": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\",
+      "BasePath": "_content/TheLastOfThem.Api",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }

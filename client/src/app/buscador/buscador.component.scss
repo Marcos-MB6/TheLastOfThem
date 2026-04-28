@@ -1,62 +1,36 @@
-$verde-marca: #5d8833;
-$texto-oscuro: #141b13;
+$verde: #5d8833;
 $texto-base: #333333;
 
 .search-section {
   h2 {
-    color: $texto-oscuro;
+    color: var(--var-negro);
+    font-size: 40px;
+    font-family: "Roboto Slab";
   }
 
   .custom-search-input {
     border: 2px solid #e0e0e0;
     border-right: none;
-    font-size: 1.1rem;
+    font-size: 16px;
 
     &:focus {
       box-shadow: none;
-      border-color: $verde-marca;
+      border-color: $verde;
     }
   }
 
   .btn-search {
-    background-color: $verde-marca;
+    background-color: $verde;
     color: white;
     font-weight: 600;
-    border: 2px solid $verde-marca;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    transition: all 0.3s ease;
+    border: 2px solid $verde;
+    padding-left: 24px;
+    padding-right: 24px;
 
     &:hover {
-      background-color: darken($verde-marca, 8%);
-      border-color: darken($verde-marca, 8%);
+      background-color: darken($verde, 8%);
+      border-color: darken($verde, 8%);
     }
-  }
-}
-
-.about-section {
-  h2 {
-    color: $texto-oscuro;
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 4px;
-      background-color: $verde-marca;
-      bottom: -12px;
-      left: calc(50% - 20px);
-      border-radius: 2px;
-    }
-  }
-
-  .about-text {
-    color: $texto-base;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
   }
 }
 
@@ -68,17 +42,7 @@ $texto-base: #333333;
   .form-check {
     padding: 8px 35px;
 
-    &:hover {
-      background-color: #f8f9fa;
-    }
   }
-}
-
-.badge {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 500;
-  font-size: 0.85rem;
-  background-color: #5d8833 !important;
 }
 
 .btn-outline-secondary {
@@ -89,7 +53,7 @@ $texto-base: #333333;
   &:hover,
   &:focus {
     background-color: #f8f9fa;
-    color: #5d8833;
-    border-color: #5d8833;
+    color: $verde;
+    border-color: $verde;
   }
 }

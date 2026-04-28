@@ -1,51 +1,21 @@
-$verde-marca: #5d8833;
-$texto-oscuro: #141b13;
 $texto-base: #333333;
 
-.search-section {
-  h2 {
-    color: $texto-oscuro;
-  }
-
-  .custom-search-input {
-    border: 2px solid #e0e0e0;
-    border-right: none;
-    font-size: 1.1rem;
-
-    &:focus {
-      box-shadow: none;
-      border-color: $verde-marca;
-    }
-  }
-
-  .btn-search {
-    background-color: $verde-marca;
-    color: white;
-    font-weight: 600;
-    border: 2px solid $verde-marca;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-color: darken($verde-marca, 8%);
-      border-color: darken($verde-marca, 8%);
-    }
-  }
-}
-
 .about-section {
+  padding-top: 32px !important;
+  padding-bottom: 48px !important;
+
   h2 {
-    color: $texto-oscuro;
+    color: var(--var-negro);
     position: relative;
-    display: inline-block;
+    font-size: 40px;
+    font-family: "Roboto Slab";
 
     &::after {
       content: "";
       position: absolute;
       width: 40px;
       height: 4px;
-      background-color: $verde-marca;
+      background-color: var(--var-verde);
       bottom: -12px;
       left: calc(50% - 20px);
       border-radius: 2px;
@@ -53,43 +23,10 @@ $texto-base: #333333;
   }
 
   .about-text {
+    font-family: "Open Sans", sans-serif;
     color: $texto-base;
-    font-size: 1.15rem;
+    font-size: 18px;
     line-height: 1.8;
-    margin-bottom: 1.2rem;
-  }
-}
-
-.dropdown-menu {
-  min-width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  .form-check {
-    padding: 8px 35px;
-
-    &:hover {
-      background-color: #f8f9fa;
-    }
-  }
-}
-
-.badge {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 500;
-  font-size: 0.85rem;
-  background-color: #5d8833 !important;
-}
-
-.btn-outline-secondary {
-  border-color: #ced4da;
-  color: #555;
-  font-family: "Open Sans", sans-serif;
-
-  &:hover,
-  &:focus {
-    background-color: #f8f9fa;
-    color: #5d8833;
-    border-color: #5d8833;
+    margin-bottom: 18px;
   }
 }

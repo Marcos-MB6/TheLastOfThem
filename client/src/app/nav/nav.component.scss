@@ -1,11 +1,6 @@
-$nav-bg: #5d8833;
-$color-letras-inputs: #fafbfd;
-$btn-login-bg: #a71616;
-$btn-register-bg: #141b13;
-
 .custom-nav {
-  height: 60px;
-  background-color: $nav-bg;
+  height: 64px;
+  background-color: var(--var-verde);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
@@ -13,10 +8,18 @@ $btn-register-bg: #141b13;
   .navbar-brand {
     font-family: "Rubik Mono One", sans-serif;
     font-size: 32px;
-    color: $color-letras-inputs !important;
+    color: var(--var-blanco) !important;
     text-transform: uppercase;
     line-height: 1;
     margin: 0;
+    text-decoration: none;
+  }
+
+  .about-text {
+    font-family: "Open Sans", sans-serif;
+    color: var(--var-blanco);
+    font-size: 20px;
+    line-height: 1.8;
     text-decoration: none;
   }
 
@@ -27,7 +30,7 @@ $btn-register-bg: #141b13;
     padding: 0 10px;
     border-radius: 4px;
     border: none;
-    background-color: $color-letras-inputs;
+    background-color: var(--var-blanco);
     color: #333333;
 
     &::placeholder {
@@ -43,6 +46,7 @@ $btn-register-bg: #141b13;
 
   .btn-login,
   .btn-register {
+    font-family: "Open Sans", sans-serif;
     width: 95px;
     height: 30px;
     font-size: 14px;
@@ -53,25 +57,24 @@ $btn-register-bg: #141b13;
     justify-content: center;
     border-radius: 4px;
     border: none;
-    color: #ffffff;
-    transition: background-color 0.3s ease;
+    color: white;
   }
 
   .btn-login {
-    background-color: $btn-login-bg;
+    background-color: var(--var-rojo);
 
     &:hover {
-      background-color: $color-letras-inputs;
-      color: $btn-login-bg;
+      background-color: var(--var-blanco);
+      color: var(--var-rojo);
     }
   }
 
   .btn-register {
-    background-color: $btn-register-bg;
+    background-color: var(--var-negro);
 
     &:hover {
-      background-color: $color-letras-inputs;
-      color: $btn-register-bg;
+      background-color: var(--var-blanco);
+      color: var(--var-negro);
     }
   }
 
@@ -79,7 +82,7 @@ $btn-register-bg: #141b13;
     position: absolute;
     top: 65px;
     right: 120px;
-    background-color: #a71616;
+    background-color: var(--var-rojo);
     color: white;
     padding: 8px 12px;
     border-radius: 4px;
@@ -94,7 +97,7 @@ $btn-register-bg: #141b13;
       right: 20px;
       border-width: 0 5px 5px 5px;
       border-style: solid;
-      border-color: transparent transparent #a71616 transparent;
+      border-color: transparent transparent var(--var-rojo) transparent;
     }
   }
 
@@ -102,7 +105,7 @@ $btn-register-bg: #141b13;
     background: transparent;
 
     span {
-      color: #fafbfd;
+      color: var(--var-blanco);
       font-family: "Open Sans", sans-serif;
       font-size: 15px;
       letter-spacing: 0.3px;

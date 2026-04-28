@@ -1,0 +1,21 @@
+.custom-footer {
+  height: 95px;
+  background-color: var(--var-verde);
+  display: flex;
+  align-items: center;
+  padding: 0px 80px;
+
+  .footer-text {
+    font-family: "Open Sans", sans-serif; 
+    color: var(--var-blanco);
+    font-size: 14px;
+    line-height: 1.8;
+    text-decoration: none;
+    margin: 0px;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 36px;
+  }
+}

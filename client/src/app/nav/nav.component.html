@@ -6,6 +6,22 @@
       >THE LAST OF THEM</a
     >
 
+    <a class="about-text" routerLink="/howtohelp" routerLinkActive="active"
+      >How to help</a
+    >
+
+    <a class="about-text" routerLink="/animals" routerLinkActive="active"
+      >Species</a
+    >
+
+    <a
+      class="about-text"
+      routerLink="/game"
+      routerLinkActive="active"
+      *ngIf="userService.currrentUser$ | async as user"
+      >Diary minigame</a
+    >
+
     <div
       class="d-flex align-items-center gap-2"
       *ngIf="!(userService.currrentUser$ | async)"
@@ -54,7 +70,9 @@
       class="d-flex align-items-center gap-2 user-welcome"
       *ngIf="userService.currrentUser$ | async as user"
     >
-      <span>Welcome <strong>{{ user.username }}</strong></span>
+      <span
+        >Welcome <strong>{{ user.username }}</strong></span
+      >
 
       <button class="btn btn-register ms-2" (click)="logOut()">Exit</button>
     </div>

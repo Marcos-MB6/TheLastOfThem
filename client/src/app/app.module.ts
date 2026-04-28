@@ -13,6 +13,8 @@ import { DialogFichaAnimalComponent } from './dialog-ficha-animal/dialog-ficha-a
 import { MatDialogModule } from '@angular/material/dialog';
 import { AnimalesComponent } from './animales/animales.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AyudarComponent } from './ayudar/ayudar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     GameComponent,
     BuscadorComponent,
     AnimalesComponent,
-    DialogFichaAnimalComponent
+    DialogFichaAnimalComponent,
+    AyudarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

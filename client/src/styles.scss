@@ -1,8 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --var-negro: #141b13;
+  --var-verde: #5d8833;
+  --var-rojo: #a71616;
+  --var-blanco: #fafbfd;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .mat-dialog-container.ng-trigger.ng-trigger-dialogContainer.ng-star-inserted {
-  padding-top: 0px;
+  padding: 0px;
   overflow: hidden;
 }

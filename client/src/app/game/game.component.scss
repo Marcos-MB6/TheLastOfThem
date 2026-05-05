@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Roboto+Slab:wght@400;700&display=swap");
+
+$gris-borde: #ccc;
+
+.animal-image-game-container {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  .animal-image-game {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.game-label {
+  padding-bottom: 10px;
+
+  label {
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    color: var(--var-negro);
+    margin-bottom: 0;
+  }
+}
+
+.game-input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: var(--var-negro);
+  height: 54px;
+  border-radius: 27px;
+  padding: 10px 24px;
+
+  &:focus {
+    border-color: var(--var-verde);
+  }
+
+  &::placeholder {
+    color: #999;
+    opacity: 0.8;
+  }
+}
+
+.game-btn {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  color: var(--var-blanco);
+  background-color: var(--var-verde);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+
+  &:hover {
+    background-color: darken(#5d8833, 10%);
+    color: var(--var-blanco);
+  }
+}
+
+.form-control {
+  height: 40px;
+  width: 600px;
+}
+
+.game-row {
+  flex-direction: column;
+}
+
+.input-row {
+  justify-content: center;
+}
+
+.acierto{
+  background-color: #C3FFBE;
+  color: #36B22B;
+
+}
+
+.fallo{
+  background-color: #F9B8B8;
+  color: #B24F4F;
+}

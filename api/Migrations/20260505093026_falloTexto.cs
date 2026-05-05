@@ -5,7 +5,7 @@
 namespace TheLastOfThem.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class NuevosAnimales : Migration
+    public partial class falloTexto : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

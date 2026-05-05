@@ -15,8 +15,20 @@ export class AnimalesService {
     return this.http.get<any[]>('http://localhost:5093/api/Animal');
   }
 
-  obtenerAnimalId(id : any) {
-    return this.http.get<any>('http://localhost:5093/api/Animal/animal/'+ id);
+  obtenerListaNombresComunes() {
+    return this.http.get<any[]>('http://localhost:5093/api/Animal/nombresComunes');
+  }
+
+  obtenerListaNombresCientificos() {
+    return this.http.get<any[]>('http://localhost:5093/api/Animal/nombresCientificos');
+  }
+
+  obtenerAnimalDiario() {
+    return this.http.get<any>('http://localhost:5093/api/Animal/minigame');
+  }
+
+  obtenerAnimalId(id: any) {
+    return this.http.get<any>('http://localhost:5093/api/Animal/animal/' + id);
   }
 
   obtenerListaAnimalesFiltrada(filtros: any) {

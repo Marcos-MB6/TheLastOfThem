@@ -1,0 +1,129 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\african almond.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\african almond.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\african wild dog.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\african wild dog.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\barberton sugarbush.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\barberton sugarbush.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\bateleur.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\bateleur.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\black harrier.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\black harrier.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\black rhinoceros.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\black rhinoceros.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\blue crane.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\blue crane.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\bramble shark.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\bramble shark.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\cape vulture.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\cape vulture.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\curlew sandpiper.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\curlew sandpiper.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\default.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\default.png",
+      "PackagePath": "staticwebassets\\fotosAnimales\\default.png"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\giraffe.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\giraffe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\greenhead tilapia.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\greenhead tilapia.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\hippopotamus.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\hippopotamus.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\hooded vulture.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\hooded vulture.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\incomati suckermouth.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\incomati suckermouth.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\kalimantan mango.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\kalimantan mango.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\mealy meadowcap.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\mealy meadowcap.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\mountain reedbuck.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\mountain reedbuck.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\pepper bark tree.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\pepper bark tree.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\phongolo catlet.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\phongolo catlet.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\school shark.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\school shark.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\small brown copper.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\small brown copper.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\soapstone pincushion.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\soapstone pincushion.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MARCOS\\Desktop\\TheLastOfThem\\api\\wwwroot\\fotosAnimales\\wattled crane.jpg",
+      "PackagePath": "staticwebassets\\fotosAnimales\\wattled crane.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TheLastOfThem.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TheLastOfThem.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.TheLastOfThem.Api.props",
+      "PackagePath": "build\\TheLastOfThem.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.TheLastOfThem.Api.props",
+      "PackagePath": "buildMultiTargeting\\TheLastOfThem.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.TheLastOfThem.Api.props",
+      "PackagePath": "buildTransitive\\TheLastOfThem.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

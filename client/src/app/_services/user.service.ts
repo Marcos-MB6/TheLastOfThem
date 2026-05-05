@@ -13,27 +13,31 @@ export class UserService {
   currrentUser$ = this.currentUserSource.asObservable();
 
   login(model: any) {
-    return this.http.post<User>('http://localhost:5093/api/User/login', model).pipe(
-      map((response: User) => {
-        const user = response;
-        if (user) {
-          this.setCurrentUser(user);
-        }
-      })
-    )
+    return this.http
+      .post<User>('http://localhost:5093/api/User/login', model)
+      .pipe(
+        map((response: User) => {
+          const user = response;
+          if(user){
+            this.setCurrentUser(user);
+          }
+        }),
+      );
   }
 
   register(model: any) {
-    return this.http.post<User>('http://localhost:5093/api/User/register', model).pipe(
-      map(user => {
-        if(user){
-          this.setCurrentUser(user);
-        }
-      })
-    )
+    return this.http
+      .post<User>('http://localhost:5093/api/User/register', model)
+      .pipe(
+        map((user) => {
+          if (user) {
+            this.setCurrentUser(user);
+          }
+        }),
+      );
   }
 
-  logOut(){
+  logOut() {
     localStorage.removeItem('user');
     this.currentUserSource.next(null);
   }

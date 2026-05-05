@@ -3,6 +3,7 @@ using api.Models;
 using API.Controllers;
 using API.Data;
 using MapsterMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,11 +24,64 @@ namespace api.Controllers
         public async Task<ActionResult<List<AnimalDTO>>> GetAnimales()
         {
             List<Animal> animales = _context.Animales.ToList();
-            List<AnimalDTO> animalesFiltradosDTO = _mapper.Map<List<AnimalDTO>>(animales);
+            List<AnimalDTO> animalesDTO = _mapper.Map<List<AnimalDTO>>(animales);
 
-            return Ok(animales);
+            return Ok(animalesDTO);
 
         }
+
+        [HttpGet("nombresComunes")]
+        public async Task<ActionResult<List<string>>> GetComunesAnimales()
+        {
+            List<string> nombresComunes = _context.Animales.Select(a => a.NombreComun).ToList();
+
+            return Ok(nombresComunes);
+
+        }
+
+        [HttpGet("nombresCientificos")]
+        public async Task<ActionResult<List<string>>> GetCientificosAnimales()
+        {
+            List<string> nombresCientificos = _context.Animales.Select(a => a.NombreCientifico).ToList();
+
+            return Ok(nombresCientificos);
+
+        }
+
+        [HttpGet("minigame")]
+        public async Task<ActionResult<AnimalDTO>> MinijuegoDiario()
+        {
+            DateTime fechaHoy = DateTime.Today;
+
+            AnimalDiario registroDiario = _context.AnimalDiario.Include(ad => ad.Animal).FirstOrDefault(ad => ad.Fecha == fechaHoy);
+
+            if (registroDiario != null)
+            {
+                AnimalDTO animaldto = _mapper.Map<AnimalDTO>(registroDiario.Animal);
+                return (animaldto);
+            }
+            else
+            {
+                Random rand = new Random();
+
+                int numeroMaximo = _context.Animales.Select(a => a.Id).Max();
+                int numeroRandom = rand.Next(1, numeroMaximo);
+                Animal animalSeleccionado = _context.Animales.First(a => a.Id == numeroRandom);
+
+                AnimalDiario nuevoRegistroDiario = new AnimalDiario
+                {
+                    Fecha = DateTime.Today,
+                    Animal = animalSeleccionado
+                };
+
+                _context.AnimalDiario.Add(nuevoRegistroDiario);
+                await _context.SaveChangesAsync();
+
+                AnimalDTO animaldto = _mapper.Map<AnimalDTO>(nuevoRegistroDiario.Animal);
+                return (animaldto);
+            }
+        }
+
 
         [HttpGet("animal/{id}")]
         public async Task<ActionResult<AnimalDTO>> GetAnimalId(int id)

@@ -1,1 +1,60 @@
-<p>game works!</p>
+<div class="container mt-5 px-4 mb-5" *ngIf="animalSeleccionado">
+
+  <div class="d-flex justify-content-center mb-5">
+    <div class="animal-image-game-container">
+      <img [src]="'assets/icons/fotosAnimales/' + animalSeleccionado.nombreComun.toLowerCase() + '.jpg'" alt="Adivina el animal" class="animal-image-game">
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class=" game-inputs-wrapper">
+      
+      <div class="row align-items-center mb-4 game-row d-flex">
+        <div class="col-4 text-center game-label">
+          <label for="commonName">Common Name</label>
+        </div>
+        <div class="col-8 input-row d-flex">
+          <input type="text" [(ngModel)]="nombreComun" id="commonName" class="form-control game-input" [readonly]="readOnly" autocomplete="off" list="listaNombresComunes">
+
+          <datalist id="listaNombresComunes">
+            <option *ngFor="let comun of nombresComunesDisponibles" [value]="comun"></option>
+          </datalist>
+
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4 game-row d-flex">
+        <div class="col-4 text-center game-label">
+          <label for="scientificName">Scientific Name</label>
+        </div>
+        <div class="col-8 input-row d-flex">
+          <input type="text" id="scientificName" [(ngModel)]="nombreCientifico" class="form-control game-input" [readonly]="readOnly" autocomplete="off" list="listaNombresCientificos">
+
+          <datalist id="listaNombresCientificos">
+            <option *ngFor="let cientifico of nombresCientificosDisponibles" [value]="cientifico"></option>
+          </datalist>
+
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-5 game-row d-flex">
+        <div class="col-4 text-center game-label">
+          <label for="animalKingdom">Kingdom</label>
+        </div>
+        <div class="col-8 input-row d-flex">
+          <input type="text" id="animalKingdom" [(ngModel)]="reinoAnimal" class="form-control game-input" [readonly]="readOnly" autocomplete="off" list="listaReinos">
+
+          <datalist id="listaReinos">
+            <option *ngFor="let reino of reinosDisponibles" [value]="reino"></option>
+          </datalist>
+
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn game-btn" (click)="comprobarRespuesta()">Adivinar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

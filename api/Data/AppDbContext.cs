@@ -11,5 +11,6 @@ public class AppDbContext : DbContext
 
     public DbSet<Animal> Animales { get; set; }
     public DbSet<User> Usuarios { get; set; }
+    public DbSet<AnimalDiario> AnimalDiario { get; set; }
 
 }

@@ -29,7 +29,6 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/']);
       },
       error: (err) => {
-        console.log('Error recibido del backend:', err.error);
 
         this.listaErrores = []; //Non acumular errores
 

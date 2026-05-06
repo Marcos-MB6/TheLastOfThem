@@ -8,35 +8,9 @@ import { AnimalesService } from '../_services/animales.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  // reinos = ['ANIMALIA', 'PLANTAE', 'FUNGI', 'CHROMISTA'];
-  // redlist = [
-  //   'Extinct',
-  //   'Extinct in the wild',
-  //   'Critically Endangered',
-  //   'Endangered',
-  //   'Vulnerable',
-  //   'Lower Risk',
-  //   'Near Threatened',
-  //   'Least Concern',
-  // ];
-  // continentes = [
-  //   'Europe',
-  //   'Africa',
-  //   'Asia',
-  //   'North America',
-  //   'South America',
-  //   'Oceania',
-  //   'Antartic',
-  // ];
+
 
   noticias: any[] = [];
-
-  // filtrosBusqueda: any = {
-  //   NombreBusqueda: '',
-  //   Reinos: {},
-  //   Redlist: {},
-  //   Continentes: {}
-  // };
 
   constructor(
     private noticiasService: NoticiasService,
@@ -58,22 +32,5 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // onSearch() {
-  //   const filtrosBusqueda2 ={
 
-  //     NombreBusqueda: this.filtrosBusqueda.NombreBusqueda,
-  //     Reinos: Object.keys(this.filtrosBusqueda.Reinos).filter(x => this.filtrosBusqueda.Reinos[x]),
-  //     Redlist: Object.keys(this.filtrosBusqueda.Redlist).filter(x => this.filtrosBusqueda.Redlist[x]),
-  //     Continentes: Object.keys(this.filtrosBusqueda.Continentes).filter(x => this.filtrosBusqueda.Continentes[x])
-  //   }
-
-  //   this.animalesService.obtenerListaAnimalesFiltrada(filtrosBusqueda2).subscribe({
-  //       next: (data: any) => {
-  //         console.log('Se ha obtenido la lista de animales');
-  //         console.log(filtrosBusqueda2);
-  //         console.log(data);
-  //       },
-  //       error: (err) => console.log(err),
-  //     });
-  // }
 }

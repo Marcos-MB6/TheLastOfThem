@@ -14,5 +14,6 @@ namespace api.Models
         public string? Especie { get; set; }
         public string? Justificacion { get; set; }
         public string? Amenazas { get; set; }
+        public string? Paises { get; set; }
     }
 }

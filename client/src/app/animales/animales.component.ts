@@ -47,7 +47,8 @@ export class AnimalesComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogFichaAnimalComponent, {
       width: '2200px',
       height: '900px',
-      data: animalSeleccionado
+      data: animalSeleccionado,
+      autoFocus: false
     });
 
     dialogRef.afterClosed().subscribe(() => {

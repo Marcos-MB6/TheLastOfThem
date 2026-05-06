@@ -63,7 +63,8 @@ public static class DbInitializer
                         Especie = columnas[7],
                         Justificacion = columnas[8],
                         Amenazas = columnas[9],
-                        Continente = columnas[10]
+                        Continente = columnas[10],
+                        Paises = columnas[11]
                     };
 
                     context.Animales.Add(animal);

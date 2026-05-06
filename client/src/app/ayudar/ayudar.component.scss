@@ -54,9 +54,14 @@ $texto-base: #333333;
       height: 100%;
       object-fit: contain;
     }
+
+    &:hover {
+      transform: translateY(-8px);
+    }
   }
 
   .card-text {
+    text-align: justify;
     padding: 0px 12px;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
